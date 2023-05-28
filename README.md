@@ -8,8 +8,10 @@ Little collection of kubernetes custom commands
 - kubectl-neat (v2.0.3)
 
 ## Installation
-Simply run:
+
 ```
+git clone https://github.com/signoredellarete/kube-utils.git
+cd kube-utils
 bash install.sh
 ```
 
