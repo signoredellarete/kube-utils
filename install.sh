@@ -1,7 +1,7 @@
 #!/bin/bash
 download=${download_wget}
 download_wget='wget'
-download_curl='curl -O'
+download_curl='curl -L -O'
 
 echo_off() {
   exec 3>&1-
