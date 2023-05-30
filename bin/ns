@@ -10,8 +10,13 @@ if [ $1 ];then
   if [ $1 == "--help" ];then
     echo "Usage: ns [namespace]"
     echo '   ns' '                     Returns current namespace'
-    echo '   ns [namespace]' '         Switch current namespace to [namespace]'
+    echo '   ns <namespace>' '         Switch current namespace to <namespace>'
+    echo '   ns --list' '              List all namespaces'
     echo ""
+    echo '   ns --help' '              Show this help'
+    echo ""
+  elif [ ${1} == "--list" ];then
+    ${k} get ns
   else
     ${k} config set-context --current --namespace $1
   fi
