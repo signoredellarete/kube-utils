@@ -1,5 +1,5 @@
 #!/bin/bash
-START_DATE="$(date '+%Y-%m-%d')";
+now="$(date '+%Y-%m-%d')";
 k=$(which kubectl)
 if [ $? -ne 0 ];then
   echo "ERROR: It seems kubectl is not installed!"
@@ -8,7 +8,7 @@ fi
 
 if [ $1 ];then
   if [ $1 == "--help" ];then
-    echo "Usage: ns [namespace]"
+    echo "Usage:"
     echo '   ns' '                     Returns current namespace'
     echo '   ns <namespace>' '         Switch current namespace to <namespace>'
     echo '   ns --list' '              List all namespaces'
