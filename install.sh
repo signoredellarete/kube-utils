@@ -25,6 +25,14 @@ check_bin() {
   fi
 }
 
+if check_bin "git"; then
+  git pull
+else
+  echo "Warning:"
+  echo "Please install git if you want to update local repo autmatically."
+  echo " "
+fi
+
 if check_bin "wget"; then
   download=${download_wget}
 elif check_bin "curl"; then
