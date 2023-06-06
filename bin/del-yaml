@@ -23,7 +23,7 @@ fi
 
 yaml_num=`ls -1 ${dir}/*.yaml 2>/dev/null|wc -l`
 if [ ${yaml_num} -gt 0 ];then
-  for i in `ls -1 ${1}/*yaml`
+  for i in `ls -1 ${dir}/*yaml`
   do
     ${k} delete -f ${i}
   done
