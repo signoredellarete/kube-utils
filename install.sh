@@ -60,7 +60,7 @@ echo " "
 for i in `ls -1`
 do
   if sudo cp ${i} /usr/local/bin/${i}; then
-    chmod +x /usr/local/bin/${i}
+    sudo chmod +x /usr/local/bin/${i}
     echo "/usr/local/bin/${i}"
   fi
 done
