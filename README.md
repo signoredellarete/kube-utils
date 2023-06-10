@@ -8,8 +8,8 @@ Little collection of kubernetes custom commands for Linux shell.
 - ctx (v1.0)
 - apply-yaml (v1.0)
 - del-yaml (v1.0)
-- kubectl-neat (v2.0.3)
-- yq (v4.34.1)
+- kubectl-neat (v2.0.3) from [iatysk - kubectl-neat](https://github.com/itaysk/kubectl-neat)
+- yq (v4.34.1) from [mikefarah - yq](https://github.com/mikefarah/yq)
 
 ## Installation
 
