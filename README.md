@@ -9,6 +9,7 @@ Little collection of kubernetes custom commands for Linux shell.
 - apply-yaml (v1.0)
 - del-yaml (v1.0)
 - kubectl-neat (v2.0.3)
+- yq (v4.34.1)
 
 ## Installation
 

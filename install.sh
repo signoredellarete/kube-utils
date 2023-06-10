@@ -15,7 +15,7 @@ echo_on() {
 
 check_bin() {
   echo_off
-  ${1}
+  ${1} --help
   result=$?
   echo_on
   if [ ${result} -ne 127 ];then
@@ -29,7 +29,15 @@ if check_bin "git"; then
   git pull
 else
   echo "Warning:"
-  echo "Please install git if you want to update local repo autmatically."
+  echo "Please install [git] if you want to update local repo autmatically."
+  echo " "
+fi
+
+if check_bin "jq"; then
+  true
+else
+  echo "Warning:"
+  echo "If you want to use yq you need to install [jq]."
   echo " "
 fi
 
@@ -43,14 +51,25 @@ else
   exit 1
 fi
 
-# Download kubectl-neat
+# Pre download from other repos
 mkdir bin/tmp
 cd bin/tmp
-echo "Downloading latest release of kubectl-neat from github..."
+
+# Download kubectl-neat
+echo "Downloading latest release of [kubectl-neat] from github..."
 
 ${download} https://github.com/itaysk/kubectl-neat/releases/latest/download/kubectl-neat_linux_amd64.tar.gz > /dev/null 2>&1
 tar xzf kubectl-neat_linux_amd64.tar.gz
 mv kubectl-neat ..
+
+# Download yq
+echo "Downloading latest release of [yq] from github..."
+BINARY=yq_linux_amd64
+${download} https://github.com/mikefarah/yq/releases/latest/download/${BINARY} > /dev/null 2>&1
+chmod +x ${BINARY}
+mv ${BINARY} ../yq
+
+# Post download from other repos
 cd ..
 rm -rf tmp
 
