@@ -38,15 +38,7 @@ case ${yn} in
            ${k} delete -f ${i}
          done
       exit;;
-  [nN] ) echo "NO";
+  [nN] ) echo " ";
       exit;;
   * ) echo "Invalid response.";;
 esac
-
-
-# if [ ${yn} == "y" ];then
-#   for i in `ls -1 ${dir}/*yaml`
-#   do
-#     ${k} delete -f ${i}
-#   done
-# fi
