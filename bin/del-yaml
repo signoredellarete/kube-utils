@@ -6,7 +6,7 @@ if [ $? -ne 0 ];then
   exit  1;
 fi
 
-dir="."
+dir=${PWD}
 
 if [ ! -z $1 ];then
   if [ $1 == "--help" ];then
@@ -24,7 +24,7 @@ fi
 
 yaml_num=`ls -1 ${dir}/*.yaml 2>/dev/null|wc -l`
 if [ ${yaml_num} -gt 0 ];then
-  read -p "Are you sure you want to delete all resources defined by yaml files in the directory ${dir} (y/n)" yn
+  read -p "Are you sure you want to delete all resources defined by yaml files in ${dir} (y/n)" yn
 else
   echo " "
   echo "No .yaml file in the directory: ${dir}"
