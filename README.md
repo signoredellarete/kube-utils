@@ -19,3 +19,17 @@ cd kube-utils
 bash install.sh
 ```
 
+## Utilization
+Each binary or script has its own help explaining how to use it.
+In order to view the command help run `<command> --help`.
+
+Ex.
+```
+$ ns --help
+Usage:
+   ns                      Returns current namespace
+   ns <namespace>          Switch current namespace to <namespace>
+   ns --list               List all namespaces
+
+   ns --help               Show this help
+```
