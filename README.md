@@ -1,5 +1,5 @@
 # kube-utils
-Little collection of kubernetes custom commands for Linux shell.
+Little collection of kubernetes custom commands for Linux shell (bash).
 
 ## List of binaries
 > The reported software versions are related to the files in this repository, but the `install.sh` script will download and install the latest available versions for all the third party binaries.
